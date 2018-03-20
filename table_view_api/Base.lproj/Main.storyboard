@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="x4F-Bw-4EW">
             <objects>
-                <viewController id="lYL-RI-5Lr" sceneMemberID="viewController">
+                <viewController id="lYL-RI-5Lr" customClass="SearchViewController" customModule="table_view_api" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cD0-ql-tyq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,9 @@
                                     <constraint firstAttribute="width" constant="118" id="NI4-A5-MaS"/>
                                 </constraints>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchAction:" destination="lYL-RI-5Lr" eventType="touchUpInside" id="jtQ-yp-A1i"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roq-BZ-eHc">
                                 <rect key="frame" x="70.666666666666686" y="121" width="273" height="30"/>
@@ -130,6 +133,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="BSP-HD-ra3"/>
+                    <connections>
+                        <outlet property="airportCode" destination="9fB-kf-kgn" id="XKG-H0-EdQ"/>
+                        <outlet property="minutesAhead" destination="40j-5K-G4v" id="h8X-0g-agi"/>
+                        <outlet property="minutesBehind" destination="u0M-pB-xRW" id="axg-7C-0H4"/>
+                        <outlet property="searchButton" destination="pna-UU-ytz" id="SqE-GV-FRA"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSearch" id="gJe-oR-pwk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXL-2i-X70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
