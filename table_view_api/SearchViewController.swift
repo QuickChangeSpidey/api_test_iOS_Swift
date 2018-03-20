@@ -16,6 +16,7 @@ class SearchViewController : UIViewController{
     @IBOutlet weak var minutesAhead: UITextField!
     @IBOutlet weak var airportCode: UITextField!
     
+    
     var data: NSData!
     
     override func viewDidLoad() {
@@ -24,11 +25,11 @@ class SearchViewController : UIViewController{
     
     @IBAction func searchAction(_ sender: Any) {
         
-        var airportName: String = airportCode.text!
-        var minutesBefore: String = minutesBehind.text!
-        var minutesAfter: String = minutesAhead.text!
+        let airportName: String = airportCode.text!
+        let minutesBefore: String = minutesBehind.text!
+        let minutesAfter: String = minutesAhead.text!
         
-        
+        FlightWebService().getFlightData(airportCode: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter)
         
         performSegue(withIdentifier: "goToSearch", sender: self)
     }
