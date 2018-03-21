@@ -157,15 +157,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="4WX-1X-0bN" customClass="FlightTableViewCell" customModule="table_view_api">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="4WX-1X-0bN" customClass="FlightTableViewCell" customModule="table_view_api">
                                         <rect key="frame" x="0.0" y="28" width="414" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WX-1X-0bN" id="yfD-ow-lU3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="101.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Source" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-Ku-FE1">
-                                                    <rect key="frame" x="16" y="11" width="52" height="19"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Source" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-Ku-FE1">
+                                                    <rect key="frame" x="16" y="11" width="51" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="51" id="niE-xJ-3hC"/>
                                                         <constraint firstAttribute="height" constant="19" id="xxT-ir-l3W"/>
@@ -174,7 +174,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FlightId" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mC6-ri-SDw">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FlightId" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mC6-ri-SDw">
                                                     <rect key="frame" x="75" y="38" width="69" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="Nxx-xP-QkE"/>
@@ -184,8 +184,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Departure Time" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agB-BJ-r9h">
-                                                    <rect key="frame" x="16" y="75" width="110" height="19"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Departure Time" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agB-BJ-r9h">
+                                                    <rect key="frame" x="16" y="75" width="237" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="Mda-ae-Jfr"/>
                                                         <constraint firstAttribute="height" constant="19" id="zp2-hn-faO"/>
@@ -204,8 +204,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Carrier" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoD-mf-urR">
-                                                    <rect key="frame" x="16" y="38" width="52" height="22"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Carrier" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoD-mf-urR">
+                                                    <rect key="frame" x="16" y="38" width="51" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="BpG-dD-BvS"/>
                                                         <constraint firstAttribute="width" constant="51" id="chB-FH-iGs"/>
@@ -226,15 +226,27 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="agB-BJ-r9h" secondAttribute="bottom" constant="7.6666666666666714" id="0tk-zu-WoH"/>
+                                                <constraint firstItem="agB-BJ-r9h" firstAttribute="top" secondItem="U5e-Ku-FE1" secondAttribute="bottom" constant="45" id="2es-QB-zVc"/>
+                                                <constraint firstAttribute="bottom" secondItem="nRt-AF-XD9" secondAttribute="bottom" constant="71.666666666666671" id="6do-uA-VqX"/>
+                                                <constraint firstAttribute="bottom" secondItem="5DC-C0-fw4" secondAttribute="bottom" constant="32.666666666666671" id="BjQ-NB-hWv"/>
                                                 <constraint firstItem="agB-BJ-r9h" firstAttribute="leading" secondItem="EoD-mf-urR" secondAttribute="leading" id="FAb-ef-67Z"/>
+                                                <constraint firstItem="EoD-mf-urR" firstAttribute="top" secondItem="U5e-Ku-FE1" secondAttribute="bottom" constant="8" id="G2s-7e-vmJ"/>
+                                                <constraint firstItem="EoD-mf-urR" firstAttribute="top" secondItem="yfD-ow-lU3" secondAttribute="top" constant="38" id="GCA-s3-csN"/>
+                                                <constraint firstItem="nRt-AF-XD9" firstAttribute="leading" secondItem="U5e-Ku-FE1" secondAttribute="trailing" constant="197" id="L5K-2c-rrU"/>
+                                                <constraint firstItem="5DC-C0-fw4" firstAttribute="leading" secondItem="mC6-ri-SDw" secondAttribute="trailing" constant="120" id="Sz2-Mq-dYg"/>
                                                 <constraint firstItem="EoD-mf-urR" firstAttribute="leading" secondItem="U5e-Ku-FE1" secondAttribute="leading" id="Vgj-oZ-XPD"/>
+                                                <constraint firstItem="EoD-mf-urR" firstAttribute="leading" secondItem="yfD-ow-lU3" secondAttribute="leading" constant="16" id="Y3t-g4-tIV"/>
                                                 <constraint firstItem="mC6-ri-SDw" firstAttribute="leading" secondItem="EoD-mf-urR" secondAttribute="trailing" constant="8" id="c4m-kw-47p"/>
                                                 <constraint firstAttribute="trailing" secondItem="5DC-C0-fw4" secondAttribute="trailing" constant="91" id="hdV-dk-imI"/>
                                                 <constraint firstItem="agB-BJ-r9h" firstAttribute="top" secondItem="mC6-ri-SDw" secondAttribute="bottom" constant="15" id="hyx-d2-0h8"/>
+                                                <constraint firstItem="mC6-ri-SDw" firstAttribute="top" secondItem="yfD-ow-lU3" secondAttribute="top" constant="38" id="ioB-M9-Fkm"/>
+                                                <constraint firstItem="agB-BJ-r9h" firstAttribute="top" secondItem="yfD-ow-lU3" secondAttribute="top" constant="75" id="jWV-4d-upf"/>
                                                 <constraint firstItem="nRt-AF-XD9" firstAttribute="top" secondItem="yfD-ow-lU3" secondAttribute="top" constant="11" id="jmS-6Q-kgm"/>
                                                 <constraint firstItem="agB-BJ-r9h" firstAttribute="top" secondItem="EoD-mf-urR" secondAttribute="bottom" constant="15" id="ko9-Dh-HGp"/>
                                                 <constraint firstItem="mC6-ri-SDw" firstAttribute="bottom" secondItem="EoD-mf-urR" secondAttribute="bottom" id="mJa-I3-8GC"/>
                                                 <constraint firstItem="5DC-C0-fw4" firstAttribute="top" secondItem="nRt-AF-XD9" secondAttribute="bottom" constant="15" id="r21-Zu-oDo"/>
+                                                <constraint firstItem="mC6-ri-SDw" firstAttribute="leading" secondItem="EoD-mf-urR" secondAttribute="trailing" constant="8" id="rDg-CD-W9J"/>
                                                 <constraint firstItem="5DC-C0-fw4" firstAttribute="leading" secondItem="nRt-AF-XD9" secondAttribute="leading" id="sI5-5x-vhJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="nRt-AF-XD9" secondAttribute="trailing" constant="53" id="ygg-rj-gei"/>
                                             </constraints>
