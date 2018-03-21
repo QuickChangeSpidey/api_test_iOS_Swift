@@ -4,8 +4,6 @@
 target 'table_view_api' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
 
 
   # Pods for table_view_api
