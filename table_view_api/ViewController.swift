@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+        
     var flights = [Flight]()
 
     @IBOutlet weak var flightTableView: UITableView!

@@ -22,6 +22,7 @@
 		BA9032BA20600CB4000ED270 /* table_view_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9032B920600CB4000ED270 /* table_view_apiUITests.swift */; };
 		BAF5CA662062F5EB00712428 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA652062F5EB00712428 /* Flight.swift */; };
 		BAF5CA682062F62200712428 /* CodeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA672062F62200712428 /* CodeShare.swift */; };
+		BAF5CA6A20630D2100712428 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		BA9032BB20600CB4000ED270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF5CA652062F5EB00712428 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		BAF5CA672062F62200712428 /* CodeShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeShare.swift; sourceTree = "<group>"; };
+		BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
 		EA14EA602BAB248E105E61F9 /* Pods_table_view_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_table_view_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 		BA90328A20600CB4000ED270 = {
 			isa = PBXGroup;
 			children = (
+				BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */,
 				BA90329520600CB4000ED270 /* table_view_api */,
 				BA9032AD20600CB4000ED270 /* table_view_apiTests */,
 				BA9032B820600CB4000ED270 /* table_view_apiUITests */,
@@ -496,6 +499,7 @@
 				BA90329F20600CB4000ED270 /* table_view_api.xcdatamodeld in Sources */,
 				BAF5CA662062F5EB00712428 /* Flight.swift in Sources */,
 				BA55CBE5206192B700ED2A57 /* SearchViewController.swift in Sources */,
+				BAF5CA6A20630D2100712428 /* FlightTableViewCell.swift in Sources */,
 				BA90329720600CB4000ED270 /* AppDelegate.swift in Sources */,
 				BAF5CA682062F62200712428 /* CodeShare.swift in Sources */,
 			);
