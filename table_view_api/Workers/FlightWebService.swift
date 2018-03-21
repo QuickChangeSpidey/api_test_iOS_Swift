@@ -12,12 +12,8 @@ import UIKit
 class FlightWebService: NSObject {
     
     enum Result<Value> {
-        case success(Array<Flight>)
+        case success([Flight])
         case failure(Error)
-    }
-    
-    struct Response: Codable {
-        let flights: [Flight]
     }
     
     struct Flight: Codable{
@@ -27,7 +23,7 @@ class FlightWebService: NSObject {
         let FltId, Carrier: String
     }
 
-    func getFlightData(for airportCode: String, minutesBehind:String, minutesAhead:String, completion: ((Result<[Response]>) -> Void)?) {
+    func getFlightData(for airportCode: String, minutesBehind:String, minutesAhead:String, completion: ((Result<[Flight]>) -> Void)?) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.qa.alaskaair.com"
@@ -56,7 +52,6 @@ class FlightWebService: NSObject {
                     let decoder = JSONDecoder()
                     
                     do {
-                      
                         let posts = try decoder.decode(Array<Flight>.self, from: jsonData)
                         completion?(.success(posts))
                     } catch {
@@ -71,42 +66,4 @@ class FlightWebService: NSObject {
         
         task.resume()
     }
-    
-    
-    
-    
-    
-    
-    
-    //    var data = [String: AnyObject]();
-//    func getFlightData(airportCode: String, minutesBehind: String, minutesAhead:String, completion: (()?)->Void) -> [String: AnyObject] {
-//        let securityToken: String = "Basic YWFnZTQxNDAxMjgwODYyNDk3NWFiYWNhZjlhNjZjMDRlMWY6ODYyYTk0NTFhYjliNGY1M2EwZWJiOWI2ZWQ1ZjYwOGM="
-//        var headers: HTTPHeaders = [:]
-//        headers["Authorization"] = securityToken
-//        let parameters: Parameters = ["city": airportCode, "minutesBehind" : minutesBehind, "miutesAhead" :minutesAhead]
-//                Alamofire.request("https://api.qa.alaskaair.com/1/airports/"+airportCode+"/flights/flightInfo", parameters: parameters, headers: headers).responseJSON { (response) in
-//                    switch response.result {
-//                    case .success:
-//                        if let json = response.result.value {
-//                            self.data = [String: AnyObject]();
-//                            if let dict = json as? [String: AnyObject]{
-//                                // Dictionary found
-//                                self.data = dict;
-//                            }
-//                            else if let list = json as? [AnyObject] {
-//                                // Array found
-//                                self.data = ["data":list as AnyObject];
-//                            }
-//                        }
-//                    case .failure(let error):
-//                        print("status code: \(error.localizedDescription)")
-//                        let alert = UIAlertController(title: "Error", message: "Something went wrong. Please try again later!", preferredStyle: .alert)
-//                                                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//                                                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-//                    }
-//                }
-//        return self.data
-//  }
-    
-    
 }

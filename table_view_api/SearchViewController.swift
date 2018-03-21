@@ -11,10 +11,8 @@ import UIKit
 
 class SearchViewController : UIViewController{
     
-    enum Result<Value> {
-        case success(Value)
-        case failure(Error)
-    }
+   
+    
     
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var minutesBehind: UITextField!
@@ -22,8 +20,7 @@ class SearchViewController : UIViewController{
     @IBOutlet weak var airportCode: UITextField!
     
     
-    var data = [String: AnyObject]();
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,7 +32,11 @@ class SearchViewController : UIViewController{
         let minutesAfter: String = minutesAhead.text!
         
         FlightWebService().getFlightData(for: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter, completion: { data in
-            print(data)
+
+
+            
+            
+            
         })
 
         performSegue(withIdentifier: "goToSearch", sender: self)
