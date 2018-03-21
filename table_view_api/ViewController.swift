@@ -11,9 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
     var flights = [Flight]()
-    
-    let flightName = ["Delta","United","American"]
-    let price = [177,190,201]
 
     @IBOutlet weak var flightTableView: UITableView!
     override func viewDidLoad() {
@@ -25,20 +22,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return flightName.count
+        return self.flights.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = flightTableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = flightName[indexPath.row]
-        cell?.detailTextLabel?.text = "\(price[indexPath.row])"
+        cell?.textLabel?.text = "test"
+        cell?.detailTextLabel?.text = "$0"
         
         return cell!
     }
-
-   
-
-
 }
 
 
