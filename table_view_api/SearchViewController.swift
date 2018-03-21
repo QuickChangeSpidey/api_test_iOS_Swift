@@ -17,8 +17,8 @@ class SearchViewController : UIViewController{
     @IBOutlet weak var airportCode: UITextField!
     
     
-    var data: NSData!
-    
+    var data = [String: AnyObject]();
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,8 +29,9 @@ class SearchViewController : UIViewController{
         let minutesBefore: String = minutesBehind.text!
         let minutesAfter: String = minutesAhead.text!
         
-        FlightWebService().getFlightData(airportCode: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter)
-        
+        self.data = FlightWebService().getFlightData(airportCode: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter)
+        print(self.data)
+
         performSegue(withIdentifier: "goToSearch", sender: self)
     }
     
