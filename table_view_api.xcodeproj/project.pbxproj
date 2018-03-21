@@ -20,6 +20,8 @@
 		BA9032A420600CB4000ED270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9032A220600CB4000ED270 /* LaunchScreen.storyboard */; };
 		BA9032AF20600CB4000ED270 /* table_view_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9032AE20600CB4000ED270 /* table_view_apiTests.swift */; };
 		BA9032BA20600CB4000ED270 /* table_view_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9032B920600CB4000ED270 /* table_view_apiUITests.swift */; };
+		BAF5CA662062F5EB00712428 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA652062F5EB00712428 /* Flight.swift */; };
+		BAF5CA682062F62200712428 /* CodeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA672062F62200712428 /* CodeShare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BA9032B520600CB4000ED270 /* table_view_apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = table_view_apiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9032B920600CB4000ED270 /* table_view_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = table_view_apiUITests.swift; sourceTree = "<group>"; };
 		BA9032BB20600CB4000ED270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAF5CA652062F5EB00712428 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		BAF5CA672062F62200712428 /* CodeShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeShare.swift; sourceTree = "<group>"; };
 		EA14EA602BAB248E105E61F9 /* Pods_table_view_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_table_view_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,13 +158,13 @@
 				BAF5CA5B2062A63400712428 /* objects */,
 				BA34EBFE206195DC00EF2395 /* Workers */,
 				BA90329620600CB4000ED270 /* AppDelegate.swift */,
+				BA55CBE4206192B700ED2A57 /* SearchViewController.swift */,
 				BA90329820600CB4000ED270 /* ViewController.swift */,
 				BA90329A20600CB4000ED270 /* Main.storyboard */,
 				BA9032A020600CB4000ED270 /* Assets.xcassets */,
 				BA9032A220600CB4000ED270 /* LaunchScreen.storyboard */,
 				BA9032A520600CB4000ED270 /* Info.plist */,
 				BA90329D20600CB4000ED270 /* table_view_api.xcdatamodeld */,
-				BA55CBE4206192B700ED2A57 /* SearchViewController.swift */,
 			);
 			path = table_view_api;
 			sourceTree = "<group>";
@@ -186,6 +190,8 @@
 		BAF5CA5B2062A63400712428 /* objects */ = {
 			isa = PBXGroup;
 			children = (
+				BAF5CA652062F5EB00712428 /* Flight.swift */,
+				BAF5CA672062F62200712428 /* CodeShare.swift */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -488,8 +494,10 @@
 				BA90329920600CB4000ED270 /* ViewController.swift in Sources */,
 				BA34EC002061960500EF2395 /* FlightWebService.swift in Sources */,
 				BA90329F20600CB4000ED270 /* table_view_api.xcdatamodeld in Sources */,
+				BAF5CA662062F5EB00712428 /* Flight.swift in Sources */,
 				BA55CBE5206192B700ED2A57 /* SearchViewController.swift in Sources */,
 				BA90329720600CB4000ED270 /* AppDelegate.swift in Sources */,
+				BAF5CA682062F62200712428 /* CodeShare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

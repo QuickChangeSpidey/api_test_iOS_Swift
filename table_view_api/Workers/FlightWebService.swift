@@ -11,19 +11,7 @@ import UIKit
 
 class FlightWebService: NSObject {
     
-    enum Result<Value> {
-        case success([Flight])
-        case failure(Error)
-    }
-    
-    struct Flight: Codable{
-        let FltId, Carrier, Orig, Dest, CutOffTime, SchedDepTime, EstDepTime, SchedArrTime, EstArrTime, ActualTime, OrigZuluOffset, DestZuluOffset, DestGate, OrigGate, TailId, FleetType, Status: String, CodeShares:[CodeShare], FltDirection: Int
-    }
-    struct CodeShare: Codable {
-        let FltId, Carrier: String
-    }
-
-    func getFlightData(for airportCode: String, minutesBehind:String, minutesAhead:String, completion: ((Result<[Flight]>) -> Void)?) {
+    func getFlightData(for airportCode: String, minutesBehind:String, minutesAhead:String, completion: (([Flight]) -> Void)?) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.qa.alaskaair.com"
@@ -46,20 +34,20 @@ class FlightWebService: NSObject {
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
             DispatchQueue.main.async {
                 if let error = responseError {
-                    completion?(.failure(error))
+                    //completion?(.failure(error))
                 } else if let jsonData = responseData {
                 
                     let decoder = JSONDecoder()
                     
                     do {
-                        let posts = try decoder.decode(Array<Flight>.self, from: jsonData)
-                        completion?(.success(posts))
+                        let posts = try decoder.decode([Flight].self, from: jsonData)
+                        completion?(posts)
                     } catch {
-                        completion?(.failure(error))
+                       // completion?(.failure(error))
                     }
                 } else {
                     let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) as Error
-                    completion?(.failure(error))
+                    //completion?(.failure(error))
                 }
             }
         }

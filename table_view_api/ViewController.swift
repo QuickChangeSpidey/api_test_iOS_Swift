@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
+    var flights = [Flight]()
+    
     let flightName = ["Delta","United","American"]
     let price = [177,190,201]
 
     @IBOutlet weak var flightTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         flightTableView.delegate = self
         flightTableView.dataSource = self
+        print(self.flights)
         
     }
     
@@ -38,4 +40,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 
 }
+
 

@@ -19,7 +19,7 @@ class SearchViewController : UIViewController{
     @IBOutlet weak var minutesAhead: UITextField!
     @IBOutlet weak var airportCode: UITextField!
     
-    
+    var flights = [Flight]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +32,15 @@ class SearchViewController : UIViewController{
         let minutesAfter: String = minutesAhead.text!
         
         FlightWebService().getFlightData(for: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter, completion: { data in
+            self.flights = data
+            self.performSegue(withIdentifier: "goToSearch", sender: self)
 
-
-            
-            
-            
         })
-
-        performSegue(withIdentifier: "goToSearch", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVC = segue.destination as! ViewController
+        destinationVC.flights = self.flights
+    }
 }
