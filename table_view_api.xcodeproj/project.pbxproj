@@ -159,8 +159,8 @@
 			children = (
 				BAF5CA5B2062A63400712428 /* objects */,
 				BA34EBFE206195DC00EF2395 /* Workers */,
-				BA90329620600CB4000ED270 /* AppDelegate.swift */,
 				BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */,
+				BA90329620600CB4000ED270 /* AppDelegate.swift */,
 				BA55CBE4206192B700ED2A57 /* SearchViewController.swift */,
 				BA90329820600CB4000ED270 /* ViewController.swift */,
 				BA90329A20600CB4000ED270 /* Main.storyboard */,
