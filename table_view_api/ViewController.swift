@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.carrierCellText.text = flight.Carrier
         cell.destinationCellText.text = flight.Dest
         cell.departureCellText.text = flight.SchedDepTime
-        cell.flightIdCellText.text = flight.FltId
+        cell.flightIDCellText.text = flight.FltId
         cell.sourceCellText.text = flight.Orig
         cell.statusCellText.text = flight.Status
         

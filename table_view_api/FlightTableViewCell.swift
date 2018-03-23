@@ -9,13 +9,13 @@
 import UIKit
 
 class FlightTableViewCell: UITableViewCell {
-    @IBOutlet weak var sourceCellText: UITextField!
-    @IBOutlet weak var destinationCellText: UITextField!
-    
-    @IBOutlet weak var statusCellText: UITextField!
-    @IBOutlet weak var carrierCellText: UITextField!
-    @IBOutlet weak var departureCellText: UITextField!
-    @IBOutlet weak var flightIdCellText: UITextField!
+   
+    @IBOutlet weak var destinationCellText: UILabel!
+    @IBOutlet weak var flightIDCellText: UILabel!
+    @IBOutlet weak var statusCellText: UILabel!
+    @IBOutlet weak var carrierCellText: UILabel!
+    @IBOutlet weak var departureCellText: UILabel!
+    @IBOutlet weak var sourceCellText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
