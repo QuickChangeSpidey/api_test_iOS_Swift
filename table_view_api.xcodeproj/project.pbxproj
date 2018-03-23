@@ -10,6 +10,7 @@
 		1509D1B7459DB109F9F8D53E /* Pods_table_view_apiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA14EA602BAB248E105E61F9 /* Pods_table_view_apiTests.framework */; };
 		4574300569BB77C68AA88EC1 /* Pods_table_view_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A8187278D23D423FD2111A /* Pods_table_view_api.framework */; };
 		AD6E845DF554BA5286B80480 /* Pods_table_view_apiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FBD101F17B750BF8951D99 /* Pods_table_view_apiUITests.framework */; };
+		BA0173412064C0B600C974E8 /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0173402064C0B500C974E8 /* FlightDetailViewController.swift */; };
 		BA34EC002061960500EF2395 /* FlightWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34EBFF2061960500EF2395 /* FlightWebService.swift */; };
 		BA55CBE5206192B700ED2A57 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55CBE4206192B700ED2A57 /* SearchViewController.swift */; };
 		BA90329720600CB4000ED270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90329620600CB4000ED270 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		73349C32DAFD1DA3487F21D9 /* Pods-table_view_apiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-table_view_apiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-table_view_apiUITests/Pods-table_view_apiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		73A8187278D23D423FD2111A /* Pods_table_view_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_table_view_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B38F1C90D5737AB383A893 /* Pods-table_view_api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-table_view_api.debug.xcconfig"; path = "Pods/Target Support Files/Pods-table_view_api/Pods-table_view_api.debug.xcconfig"; sourceTree = "<group>"; };
+		BA0173402064C0B500C974E8 /* FlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
 		BA34EBFF2061960500EF2395 /* FlightWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightWebService.swift; sourceTree = "<group>"; };
 		BA55CBE4206192B700ED2A57 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BA90329320600CB4000ED270 /* table_view_api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = table_view_api.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA01733F2064B91500C974E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA90329820600CB4000ED270 /* ViewController.swift */,
+				BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */,
+				BA55CBE4206192B700ED2A57 /* SearchViewController.swift */,
+				BA0173402064C0B500C974E8 /* FlightDetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BA34EBFE206195DC00EF2395 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,12 +170,10 @@
 		BA90329520600CB4000ED270 /* table_view_api */ = {
 			isa = PBXGroup;
 			children = (
+				BA01733F2064B91500C974E8 /* Views */,
 				BAF5CA5B2062A63400712428 /* objects */,
 				BA34EBFE206195DC00EF2395 /* Workers */,
-				BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */,
 				BA90329620600CB4000ED270 /* AppDelegate.swift */,
-				BA55CBE4206192B700ED2A57 /* SearchViewController.swift */,
-				BA90329820600CB4000ED270 /* ViewController.swift */,
 				BA90329A20600CB4000ED270 /* Main.storyboard */,
 				BA9032A020600CB4000ED270 /* Assets.xcassets */,
 				BA9032A220600CB4000ED270 /* LaunchScreen.storyboard */,
@@ -494,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0173412064C0B600C974E8 /* FlightDetailViewController.swift in Sources */,
 				BA90329920600CB4000ED270 /* ViewController.swift in Sources */,
 				BA34EC002061960500EF2395 /* FlightWebService.swift in Sources */,
 				BA90329F20600CB4000ED270 /* table_view_api.xcdatamodeld in Sources */,
