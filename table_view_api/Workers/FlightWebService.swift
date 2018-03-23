@@ -34,7 +34,8 @@ class FlightWebService: NSObject {
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
             DispatchQueue.main.async {
                 if let error = responseError {
-                    //completion?(.failure(error))
+                    self.showError()
+
                 } else if let jsonData = responseData {
                 
                     let decoder = JSONDecoder()
@@ -43,15 +44,22 @@ class FlightWebService: NSObject {
                         let posts = try decoder.decode([Flight].self, from: jsonData)
                         completion?(posts)
                     } catch {
-                       // completion?(.failure(error))
+                        self.showError()
+
                     }
                 } else {
                     let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) as Error
-                    //completion?(.failure(error))
+                    self.showError()
                 }
             }
         }
-        
         task.resume()
+    }
+    
+    func showError(){
+        let alertView = UIAlertController(title: "Error", message: "Something went wrong. Please try later!", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertView, animated: true, completion: nil)
+
     }
 }
