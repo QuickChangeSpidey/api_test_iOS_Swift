@@ -12,6 +12,7 @@
 		AD6E845DF554BA5286B80480 /* Pods_table_view_apiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FBD101F17B750BF8951D99 /* Pods_table_view_apiUITests.framework */; };
 		BA0173412064C0B600C974E8 /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0173402064C0B500C974E8 /* FlightDetailViewController.swift */; };
 		BA34EC002061960500EF2395 /* FlightWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34EBFF2061960500EF2395 /* FlightWebService.swift */; };
+		BA42DE3B2066A35D003F9777 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42DE3A2066A35D003F9777 /* DataController.swift */; };
 		BA55CBE5206192B700ED2A57 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55CBE4206192B700ED2A57 /* SearchViewController.swift */; };
 		BA90329720600CB4000ED270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90329620600CB4000ED270 /* AppDelegate.swift */; };
 		BA90329920600CB4000ED270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90329820600CB4000ED270 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		73B38F1C90D5737AB383A893 /* Pods-table_view_api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-table_view_api.debug.xcconfig"; path = "Pods/Target Support Files/Pods-table_view_api/Pods-table_view_api.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0173402064C0B500C974E8 /* FlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
 		BA34EBFF2061960500EF2395 /* FlightWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightWebService.swift; sourceTree = "<group>"; };
+		BA42DE3A2066A35D003F9777 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = table_view_api/Objects/DataController.swift; sourceTree = SOURCE_ROOT; };
 		BA55CBE4206192B700ED2A57 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BA90329320600CB4000ED270 /* table_view_api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = table_view_api.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA90329620600CB4000ED270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				BAF5CA652062F5EB00712428 /* Flight.swift */,
 				BAF5CA672062F62200712428 /* CodeShare.swift */,
+				BA42DE3A2066A35D003F9777 /* DataController.swift */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				BA34EC002061960500EF2395 /* FlightWebService.swift in Sources */,
 				BA90329F20600CB4000ED270 /* table_view_api.xcdatamodeld in Sources */,
 				BAF5CA662062F5EB00712428 /* Flight.swift in Sources */,
+				BA42DE3B2066A35D003F9777 /* DataController.swift in Sources */,
 				BA55CBE5206192B700ED2A57 /* SearchViewController.swift in Sources */,
 				BAF5CA6A20630D2100712428 /* FlightTableViewCell.swift in Sources */,
 				BA90329720600CB4000ED270 /* AppDelegate.swift in Sources */,
