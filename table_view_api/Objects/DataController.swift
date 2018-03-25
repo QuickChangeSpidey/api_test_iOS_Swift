@@ -25,6 +25,30 @@ class DataController {
                 fatalError(error!.localizedDescription)
             }
             completion?()
+            self.autoSaveViewContext(interval: 20)
         }
     }
 }
+
+extension DataController{
+    
+    func autoSaveViewContext(interval: TimeInterval = 30){
+        print("AUTO SAVING")
+        
+        guard interval > 0 else {
+            print ("cannot set negative time interval")
+            return
+        }
+        
+        if viewContext.hasChanges {
+            try? viewContext.save()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+interval) {
+            self.autoSaveViewContext(interval: interval)
+        }
+        
+    }
+    
+}
+
