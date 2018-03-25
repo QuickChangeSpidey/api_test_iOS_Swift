@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class SearchViewController : UIViewController{
     @IBOutlet weak var searchButton: UIButton!
@@ -17,8 +18,20 @@ class SearchViewController : UIViewController{
     
     var flights = [Flight]()
     
+    var results = [Result]()
+    
+    var dataController: DataController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fetchRequest:NSFetchRequest<Result> = Result.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "city", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        if let result = try? self.dataController.viewContext.fetch(fetchRequest){
+            results = result
+            print (result)
+        }
     }
     
     @IBAction func searchAction(_ sender: Any) {
@@ -27,12 +40,20 @@ class SearchViewController : UIViewController{
         let airportName: String = airportCode.text!
         let minutesBefore: String = minutesBehind.text!
         let minutesAfter: String = minutesAhead.text!
-        
+
         FlightWebService().getFlightData(for: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter, completion: { data in
             self.flights = data
             self.performSegue(withIdentifier: "goToSearch", sender: self)
             UIViewController.removeSpinner(spinner: sv)
         })
+        
+        let result = Result(context: dataController.viewContext)
+        result.minutesAfter = minutesAfter
+        result.minutesBehind = minutesBefore
+        result.city = airportName
+        try? dataController.viewContext.save()
+        print(result)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
