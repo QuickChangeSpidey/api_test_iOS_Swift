@@ -12,11 +12,13 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell
 {
-    @IBOutlet weak var minutesBehindText: UILabel!
+  
     @IBOutlet weak var airportCodeText: UILabel!
-    @IBOutlet weak var minutesAheadText: UILabel!
     
+    @IBOutlet weak var minutesAfterText: UILabel!
     
+    @IBOutlet weak var timeText: UILabel!
     
+    @IBOutlet weak var minutesBeforeText: UILabel!
     
 }
