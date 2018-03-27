@@ -16,12 +16,23 @@ class HistoryViewcontroller: UIViewController, UITableViewDataSource, UITableVie
     
     var dataController:DataController!
     var data:[Result] = []
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         historyTableView.delegate = self
         historyTableView.dataSource = self
+        
+
+        let fetchRequest:NSFetchRequest<Result> = Result.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "time", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        if let result = try? self.dataController.viewContext.fetch(fetchRequest){
+            data = result
+        }
+            
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +42,7 @@ class HistoryViewcontroller: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "historycell", for: indexPath) as? HistoryTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of HistoryTableViewCell.")
         }
         
         let result = self.data[indexPath.row]

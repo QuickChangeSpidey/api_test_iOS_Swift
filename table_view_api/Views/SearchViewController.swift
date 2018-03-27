@@ -20,19 +20,6 @@ class SearchViewController : UIViewController{
 
     var flights: [Flight] = []
     var dataController: DataController!
-    var results:[Result] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let fetchRequest:NSFetchRequest<Result> = Result.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "city", ascending: false)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        if let result = try? self.dataController.viewContext.fetch(fetchRequest){
-
-            results = result
-        
-        }
-    }
 
     @IBAction func searchAction(_ sender: Any) {
         
@@ -60,7 +47,6 @@ class SearchViewController : UIViewController{
         if (segue.identifier == "history") {
             let destinationVC = segue.destination as! HistoryViewcontroller
             destinationVC.dataController = dataController
-            destinationVC.data = results
         }
         else {
             let destinationVC = segue.destination as! ViewController

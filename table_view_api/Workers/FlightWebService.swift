@@ -35,6 +35,7 @@ class FlightWebService: NSObject {
             DispatchQueue.main.async {
                 if let error = responseError {
                     self.showError()
+                    print (error)
 
                 } else if let jsonData = responseData {
                 
@@ -48,7 +49,6 @@ class FlightWebService: NSObject {
 
                     }
                 } else {
-                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) as Error
                     self.showError()
                 }
             }
