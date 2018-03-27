@@ -172,12 +172,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZzT-c7-da9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="EDT-ba-GkM"/>
-                                    <constraint firstAttribute="height" constant="778" id="dAl-9v-DkK"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historycell" rowHeight="150" id="wER-1k-b88" customClass="HistoryTableViewCell" customModule="table_view_api">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
@@ -236,10 +232,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZzT-c7-da9" firstAttribute="top" secondItem="l2Q-wD-zZz" secondAttribute="top" id="O7H-nF-fXD"/>
-                            <constraint firstItem="ZzT-c7-da9" firstAttribute="bottom" secondItem="eK6-DP-PNk" secondAttribute="bottom" id="aXq-8e-W9p"/>
-                            <constraint firstItem="ZzT-c7-da9" firstAttribute="trailing" secondItem="eK6-DP-PNk" secondAttribute="trailing" id="rJH-fN-xbZ"/>
-                            <constraint firstItem="ZzT-c7-da9" firstAttribute="leading" secondItem="eK6-DP-PNk" secondAttribute="leading" id="uqQ-qb-EMg"/>
+                            <constraint firstItem="ZzT-c7-da9" firstAttribute="trailing" secondItem="eK6-DP-PNk" secondAttribute="trailing" id="MMB-8Z-qVh"/>
+                            <constraint firstAttribute="bottom" secondItem="ZzT-c7-da9" secondAttribute="bottom" id="Q0G-pn-4Er"/>
+                            <constraint firstItem="ZzT-c7-da9" firstAttribute="top" secondItem="l2Q-wD-zZz" secondAttribute="top" id="d3u-WD-boh"/>
+                            <constraint firstItem="ZzT-c7-da9" firstAttribute="leading" secondItem="eK6-DP-PNk" secondAttribute="leading" id="gLi-2F-Da2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eK6-DP-PNk"/>
                     </view>

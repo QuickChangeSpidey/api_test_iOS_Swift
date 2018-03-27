@@ -38,7 +38,12 @@ class HistoryViewcontroller: UIViewController, UITableViewDataSource, UITableVie
         cell.airportCodeText.text = result.city!
         cell.minutesAfterText.text = result.minutesAfter!
         cell.minutesBeforeText.text = result.minutesBehind!
-        cell.timeText.text = "Time goes Here"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MMM/dd HH:mm:ss"
+            
+        let timeString = dateFormatter.string(from: result.time!)
+        cell.timeText.text = timeString
 
         return cell
     }

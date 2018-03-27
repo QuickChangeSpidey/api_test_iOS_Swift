@@ -50,6 +50,7 @@ class SearchViewController : UIViewController{
         let minutesBefore: String = minutesBehind.text!
         let minutesAfter: String = minutesAhead.text!
         
+        
         let result = Result(context: dataController.viewContext)
         result.minutesAfter = minutesAfter
         result.minutesBehind = minutesBefore
