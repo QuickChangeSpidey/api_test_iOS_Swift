@@ -22,6 +22,8 @@
 		BA9032A420600CB4000ED270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9032A220600CB4000ED270 /* LaunchScreen.storyboard */; };
 		BA9032AF20600CB4000ED270 /* table_view_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9032AE20600CB4000ED270 /* table_view_apiTests.swift */; };
 		BA9032BA20600CB4000ED270 /* table_view_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9032B920600CB4000ED270 /* table_view_apiUITests.swift */; };
+		BABD1A312069EE4300E4F99D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1A302069EE4300E4F99D /* HistoryViewController.swift */; };
+		BABD1A332069F3EB00E4F99D /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1A322069F3EB00E4F99D /* HistoryTableViewCell.swift */; };
 		BAF5CA662062F5EB00712428 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA652062F5EB00712428 /* Flight.swift */; };
 		BAF5CA682062F62200712428 /* CodeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA672062F62200712428 /* CodeShare.swift */; };
 		BAF5CA6A20630D2100712428 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */; };
@@ -71,6 +73,8 @@
 		BA9032B520600CB4000ED270 /* table_view_apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = table_view_apiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9032B920600CB4000ED270 /* table_view_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = table_view_apiUITests.swift; sourceTree = "<group>"; };
 		BA9032BB20600CB4000ED270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABD1A302069EE4300E4F99D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		BABD1A322069F3EB00E4F99D /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		BAF5CA652062F5EB00712428 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		BAF5CA672062F62200712428 /* CodeShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeShare.swift; sourceTree = "<group>"; };
 		BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				BAF5CA6920630D2100712428 /* FlightTableViewCell.swift */,
 				BA55CBE4206192B700ED2A57 /* SearchViewController.swift */,
 				BA0173402064C0B500C974E8 /* FlightDetailViewController.swift */,
+				BABD1A302069EE4300E4F99D /* HistoryViewController.swift */,
+				BABD1A322069F3EB00E4F99D /* HistoryTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -513,6 +519,8 @@
 				BA34EC002061960500EF2395 /* FlightWebService.swift in Sources */,
 				BA90329F20600CB4000ED270 /* table_view_api.xcdatamodeld in Sources */,
 				BAF5CA662062F5EB00712428 /* Flight.swift in Sources */,
+				BABD1A312069EE4300E4F99D /* HistoryViewController.swift in Sources */,
+				BABD1A332069F3EB00E4F99D /* HistoryTableViewCell.swift in Sources */,
 				BA42DE3B2066A35D003F9777 /* DataController.swift in Sources */,
 				BA55CBE5206192B700ED2A57 /* SearchViewController.swift in Sources */,
 				BAF5CA6A20630D2100712428 /* FlightTableViewCell.swift in Sources */,

@@ -103,6 +103,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyp-Hw-Jng">
+                                <rect key="frame" x="182" y="420" width="50" height="30"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="goToHistory:" destination="lYL-RI-5Lr" eventType="touchUpInside" id="sKm-KE-lLT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88948702271057456" blue="0.56860864893363261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -111,9 +118,12 @@
                             <constraint firstItem="40j-5K-G4v" firstAttribute="top" secondItem="9fB-kf-kgn" secondAttribute="bottom" constant="51" id="AJN-b5-KYW"/>
                             <constraint firstItem="9fB-kf-kgn" firstAttribute="centerX" secondItem="cD0-ql-tyq" secondAttribute="centerX" id="E27-I0-Oiy"/>
                             <constraint firstItem="pna-UU-ytz" firstAttribute="top" secondItem="9fB-kf-kgn" secondAttribute="bottom" constant="170" id="HEz-gj-q2z"/>
+                            <constraint firstItem="Wyp-Hw-Jng" firstAttribute="top" secondItem="pna-UU-ytz" secondAttribute="bottom" constant="37" id="IlX-w8-mMD"/>
                             <constraint firstItem="pna-UU-ytz" firstAttribute="centerX" secondItem="cD0-ql-tyq" secondAttribute="centerX" id="UtP-GM-xFG"/>
+                            <constraint firstItem="7tg-P3-mQx" firstAttribute="bottom" secondItem="Wyp-Hw-Jng" secondAttribute="bottom" constant="286" id="fVN-fb-hyg"/>
                             <constraint firstItem="9fB-kf-kgn" firstAttribute="top" secondItem="7tg-P3-mQx" secondAttribute="top" constant="89" id="nb4-Tm-cVN"/>
                             <constraint firstItem="u0M-pB-xRW" firstAttribute="leading" secondItem="9fB-kf-kgn" secondAttribute="leading" id="pbJ-SV-KLe"/>
+                            <constraint firstItem="7tg-P3-mQx" firstAttribute="trailing" secondItem="Wyp-Hw-Jng" secondAttribute="trailing" constant="182" id="vjT-OQ-vBM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7tg-P3-mQx"/>
                         <variation key="default">
@@ -140,15 +150,49 @@
                     <navigationItem key="navigationItem" id="BSP-HD-ra3"/>
                     <connections>
                         <outlet property="airportCode" destination="9fB-kf-kgn" id="XKG-H0-EdQ"/>
+                        <outlet property="historyButton" destination="Wyp-Hw-Jng" id="LtB-Wz-KVI"/>
                         <outlet property="minutesAhead" destination="40j-5K-G4v" id="h8X-0g-agi"/>
                         <outlet property="minutesBehind" destination="u0M-pB-xRW" id="axg-7C-0H4"/>
                         <outlet property="searchButton" destination="pna-UU-ytz" id="SqE-GV-FRA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSearch" id="gJe-oR-pwk"/>
+                        <segue destination="TUS-W4-qkc" kind="show" identifier="history" id="Io8-7M-qJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXL-2i-X70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-336.23188405797106" y="9.7826086956521738"/>
+        </scene>
+        <!--History Viewcontroller-->
+        <scene sceneID="PbL-OS-Ebl">
+            <objects>
+                <viewController id="TUS-W4-qkc" customClass="HistoryViewcontroller" customModule="table_view_api" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l2Q-wD-zZz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZzT-c7-da9">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d8d-kB-nlx">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d8d-kB-nlx" id="Bf6-gp-Las">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="eK6-DP-PNk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLp-Hk-UjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="830"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -162,7 +206,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="4WX-1X-0bN" customClass="FlightTableViewCell" customModule="table_view_api">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="4WX-1X-0bN" customClass="FlightTableViewCell" customModule="table_view_api">
                                         <rect key="frame" x="0.0" y="28" width="414" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WX-1X-0bN" id="yfD-ow-lU3">

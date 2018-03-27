@@ -15,50 +15,65 @@ class SearchViewController : UIViewController{
     @IBOutlet weak var minutesBehind: UITextField!
     @IBOutlet weak var minutesAhead: UITextField!
     @IBOutlet weak var airportCode: UITextField!
+    @IBOutlet weak var historyButton: UIButton!
     
-    var flights = [Flight]()
+    @IBAction func goToHistory(_ sender: Any) {
     
-    var results = [Result]()
+
+        self.performSegue(withIdentifier: "history", sender: self)
+        
+    }
+   
     
+    
+    
+    var flights: [Flight] = []
     var dataController: DataController!
-    
+    var results:[Result] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let fetchRequest:NSFetchRequest<Result> = Result.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "city", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         if let result = try? self.dataController.viewContext.fetch(fetchRequest){
+
             results = result
-            print (result)
+        
         }
     }
-    
+
     @IBAction func searchAction(_ sender: Any) {
         
         let sv = UIViewController.displaySpinner(onView: self.view)
         let airportName: String = airportCode.text!
         let minutesBefore: String = minutesBehind.text!
         let minutesAfter: String = minutesAhead.text!
-
-        FlightWebService().getFlightData(for: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter, completion: { data in
-            self.flights = data
-            self.performSegue(withIdentifier: "goToSearch", sender: self)
-            UIViewController.removeSpinner(spinner: sv)
-        })
         
         let result = Result(context: dataController.viewContext)
         result.minutesAfter = minutesAfter
         result.minutesBehind = minutesBefore
         result.city = airportName
         try? dataController.viewContext.save()
-        print(result)
-        
+
+        FlightWebService().getFlightData(for: airportName, minutesBehind: minutesBefore, minutesAhead: minutesAfter, completion: { data in
+            self.flights = data
+            self.performSegue(withIdentifier: "goToSearch", sender: self)
+            UIViewController.removeSpinner(spinner: sv)
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "history") {
+            let destinationVC = segue.destination as! HistoryViewcontroller
+            destinationVC.dataController = dataController
+            destinationVC.data = results
+        }
+        else{
         let destinationVC = segue.destination as! ViewController
         destinationVC.flights = self.flights
+        }
     }
 }
 
