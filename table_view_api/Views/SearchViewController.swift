@@ -49,7 +49,7 @@ class SearchViewController : UIViewController{
             destinationVC.dataController = dataController
         }
         else {
-            let destinationVC = segue.destination as! ViewController
+            let destinationVC = segue.destination as! FlightTableView
             destinationVC.flights = self.flights
         }
     }

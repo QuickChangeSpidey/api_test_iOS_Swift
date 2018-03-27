@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FlightTableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var flights = [Flight]()
     var data = [String]()
