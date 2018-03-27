@@ -16,6 +16,7 @@ class FlightTableViewCell: UITableViewCell {
     @IBOutlet weak var carrierCellText: UILabel!
     @IBOutlet weak var departureCellText: UILabel!
     @IBOutlet weak var sourceCellText: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

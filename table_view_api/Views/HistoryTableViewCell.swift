@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
+
+class HistoryTableViewCell: UITableViewCell
+{
+    @IBOutlet weak var minutesBehindText: UILabel!
+    @IBOutlet weak var airportCodeText: UILabel!
+    @IBOutlet weak var minutesAheadText: UILabel!
+    
+    
+    
+    
+}

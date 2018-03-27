@@ -70,9 +70,9 @@ class SearchViewController : UIViewController{
             destinationVC.dataController = dataController
             destinationVC.data = results
         }
-        else{
-        let destinationVC = segue.destination as! ViewController
-        destinationVC.flights = self.flights
+        else {
+            let destinationVC = segue.destination as! ViewController
+            destinationVC.flights = self.flights
         }
     }
 }
