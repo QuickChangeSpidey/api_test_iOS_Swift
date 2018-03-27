@@ -17,16 +17,7 @@ class SearchViewController : UIViewController{
     @IBOutlet weak var airportCode: UITextField!
     @IBOutlet weak var historyButton: UIButton!
     
-    @IBAction func goToHistory(_ sender: Any) {
-    
 
-        self.performSegue(withIdentifier: "history", sender: self)
-        
-    }
-   
-    
-    
-    
     var flights: [Flight] = []
     var dataController: DataController!
     var results:[Result] = []
@@ -75,6 +66,10 @@ class SearchViewController : UIViewController{
             let destinationVC = segue.destination as! ViewController
             destinationVC.flights = self.flights
         }
+    }
+    
+    @IBAction func goToHistory(_ sender: Any) {
+            self.performSegue(withIdentifier: "history", sender: self)
     }
 }
 
