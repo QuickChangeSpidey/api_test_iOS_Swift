@@ -59,6 +59,20 @@ class HistoryViewcontroller: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath){
+        if (indexPath.row % 2 == 0)
+        {
+            cell.backgroundColor = colorForIndex(index: indexPath.row)
+        } else {
+            cell.backgroundColor = UIColor.white
+        }
+    }
+    
+    func colorForIndex(index: Int) -> UIColor{
+        return UIColor(red: 0.9137, green: 0.9294, blue: 0, alpha: 1)
+    }
+    
     
     
     
