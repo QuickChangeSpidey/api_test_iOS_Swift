@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class HistoryViewcontroller: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var historyTableView: UITableView!
     

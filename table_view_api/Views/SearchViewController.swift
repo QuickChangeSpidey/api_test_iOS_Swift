@@ -44,8 +44,8 @@ class SearchViewController : UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if (segue.identifier == "history") {
-            let destinationVC = segue.destination as! HistoryViewcontroller
+        if (segue.identifier == "goToHistory") {
+            let destinationVC = segue.destination as! HistoryViewController
             destinationVC.dataController = dataController
         }
         else {
@@ -55,7 +55,7 @@ class SearchViewController : UIViewController{
     }
     
     @IBAction func goToHistory(_ sender: Any) {
-            self.performSegue(withIdentifier: "history", sender: self)
+            self.performSegue(withIdentifier: "goToHistory", sender: self)
     }
 }
 

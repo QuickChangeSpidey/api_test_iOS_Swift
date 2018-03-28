@@ -155,17 +155,17 @@
                         <outlet property="minutesBehind" destination="u0M-pB-xRW" id="axg-7C-0H4"/>
                         <outlet property="searchButton" destination="pna-UU-ytz" id="SqE-GV-FRA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSearch" id="gJe-oR-pwk"/>
-                        <segue destination="TUS-W4-qkc" kind="show" identifier="history" id="Io8-7M-qJj"/>
+                        <segue destination="TUS-W4-qkc" kind="show" identifier="goToHistory" id="Io8-7M-qJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXL-2i-X70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-336.23188405797106" y="9.7826086956521738"/>
         </scene>
-        <!--History Viewcontroller-->
+        <!--History View Controller-->
         <scene sceneID="PbL-OS-Ebl">
             <objects>
-                <viewController id="TUS-W4-qkc" customClass="HistoryViewcontroller" customModule="table_view_api" sceneMemberID="viewController">
+                <viewController id="TUS-W4-qkc" customClass="HistoryViewController" customModule="table_view_api" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l2Q-wD-zZz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
