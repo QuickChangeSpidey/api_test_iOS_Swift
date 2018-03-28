@@ -11,7 +11,6 @@ import UIKit
 class FlightTableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var flights = [Flight]()
-    var data = [String]()
     var flight:Flight!
     
     @IBOutlet weak var flightTableView: UITableView!
